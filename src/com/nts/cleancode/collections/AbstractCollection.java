@@ -16,21 +16,12 @@ public abstract class AbstractCollection {
 	protected Object[] elements = new Object[INITIAL_CAPACITY];
 
 	public void addAll(AbstractCollection collection) {
-		if (collection instanceof Set) {
-			AbstractCollection s = (AbstractCollection) collection;
-			for (int i = 0; i < s.size(); i++) {
-				if (!contains(s.get(i))) {
-					add(s.get(i));
+		
+			for (int i = 0; i < collection.size(); i++) {
+				if (!contains(collection.get(i))) {
+					add(collection.get(i));
 				}
 			}
-		} else if (collection instanceof List) {
-			List l = (List) collection;
-			for (int i = 0; i < l.size(); i++) {
-				if (!contains(l.get(i))) {
-					add(l.get(i));
-				}
-			}
-		}
 	}
 
 	public abstract boolean isEmpty();
