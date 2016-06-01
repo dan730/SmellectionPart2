@@ -37,4 +37,8 @@ public abstract class AbstractCollection {
 	public Object get(int index) {
 		return elements[index];
 	}
+
+	public int capacity() {
+		return elements.length;
+	}
 }

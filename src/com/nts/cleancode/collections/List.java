@@ -76,10 +76,6 @@ public class List extends AbstractCollection {
 		return false;
 	}
 	
-	public int capacity() {
-		return elements.length;
-	}
-
 	public void set(int i, Object value) {
 		if (!readOnly) {
 			if (i >= size)

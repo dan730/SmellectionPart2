@@ -73,10 +73,6 @@ public class Set extends AbstractCollection {
 		}
 	}
 
-	public int capacity() {
-		return elements.length;
-	}
-
 	public void setReadOnly(boolean b) {
 		readOnly = b;
 	}
