@@ -16,8 +16,8 @@ public abstract class AbstractCollection {
 		if (collection instanceof Set) {
 			Set s = (Set)collection;
 			for (int i=0; i < s.size(); i++) {
-				if (!contains(s.getElementAt(i))) {
-					add(s.getElementAt(i));
+				if (!contains(s.get(i))) {
+					add(s.get(i));
 				}
 			}
 		} else if (collection instanceof List) {
