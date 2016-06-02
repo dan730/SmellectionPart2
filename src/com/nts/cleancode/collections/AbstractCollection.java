@@ -14,6 +14,7 @@ package com.nts.cleancode.collections;
 public abstract class AbstractCollection {
 	protected static int INITIAL_CAPACITY = 10;
 	protected Object[] elements = new Object[INITIAL_CAPACITY];
+	protected int size = 0;
 
 	public void addAll(AbstractCollection collection) {
 		
@@ -32,13 +33,15 @@ public abstract class AbstractCollection {
 
 	public abstract boolean contains(Object element);
 
-	public abstract int size();
-
 	public Object get(int index) {
 		return elements[index];
 	}
 
 	public int capacity() {
 		return elements.length;
+	}
+
+	public int size() {
+		return size;
 	}
 }

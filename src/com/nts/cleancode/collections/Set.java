@@ -12,7 +12,6 @@
 package com.nts.cleancode.collections;
 
 public class Set extends AbstractCollection {
-	private int size = 0;
 	private boolean readOnly;
 
 	public boolean isEmpty() {
@@ -41,10 +40,6 @@ public class Set extends AbstractCollection {
 			if (elements[i].equals(element))
 				return true;
 		return false;
-	}
-
-	public int size() {
-		return size;
 	}
 
 	public boolean remove(Object element) {
